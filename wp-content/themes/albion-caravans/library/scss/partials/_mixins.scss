@@ -1,0 +1,104 @@
+/******************************************************************
+Stylesheet: Mixins Stylesheet
+******************************************************************/
+
+
+/*********************
+FONTS
+*********************/
+
+@mixin font-header{
+	font-family: $header-font;
+	font-weight: bold;
+	line-height: normal;
+}
+
+@mixin font-body{
+	font-family: $body-font;
+	font-weight: normal;
+	line-height: normal;
+}
+
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ rem mixin with a pixel fallback for font size
+@mixin font-size($sizeValue: 1.6){
+	font-size: ($sizeValue) + px;
+	font-size: ($sizeValue/10) + rem;
+}
+
+/*********************
+TRANSITIONS
+*********************/
+
+@mixin transition($transition...) {
+  $prefixes:      ("-webkit-", "" );
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+/*********************
+BORDER RADIUS
+*********************/
+
+@mixin border-radius($radius: 3px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+/*********************
+CSS3 GRADIENTS
+*********************/
+
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+
+@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
+  -webkit-box-shadow: $horizontal $vertical $blur $color;
+  -moz-box-shadow: $horizontal $vertical $blur $color;
+  box-shadow: $horizontal $vertical $blur $color;
+}
+
+
+/*********************
+BOX SIZING
+*********************/
+
+/* @include box-sizing(border-box); */
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing:    $type;
+	-ms-box-sizing:     $type;
+	box-sizing:         $type;
+}
+
+
+/*********************
+BACKGROUND SIZE
+*********************/
+
+@mixin back-size($size: cover) {
+	-webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}
+
+
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color;
+  background-color: $color;
+}
+
+

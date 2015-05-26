@@ -1,0 +1,81 @@
+/******************************************************************
+Stylesheet: Mobile Stylesheet
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.home-buy{
+	
+	.we-buy{
+		
+		&:after {
+			top: 15%;
+			left: 100%;
+			border: solid transparent;
+			content: '';
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(241, 98, 72, 0);
+			border-left-color: $al-blue;
+			border-width: 15px;
+			margin-left: 0;
+			z-index: 1;
+		}	
+	}
+}
+
+.lower-panels{
+	padding: 1rem 0;
+	
+	.accessories,
+	.help{
+		background-position: 120% center;
+		padding: 1rem;
+		
+		h3,p{
+			width: 60%;
+		}
+		
+		a{
+			color: $white;
+		}
+	}
+	.accessories{
+		margin-bottom: 1rem;
+	}
+}
+
+
+
+/*********************
+HEADER STYLES
+*********************/
+
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+
+
+/*********************
+FOOTER STYLES
+*********************/

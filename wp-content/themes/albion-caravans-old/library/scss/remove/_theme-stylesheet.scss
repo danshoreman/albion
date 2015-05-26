@@ -1,0 +1,91 @@
+/*********************************************************************************
+Stylesheet: Theme Stylesheet - REMOVE THIS FILE BEFORE GOING TO PRODUCTION
+*********************************************************************************/
+
+
+
+// header
+.page-header{
+	text-align: center;
+
+	.main-logo{
+		@include rem(width, 5rem);
+		height: auto;
+		@include rem(border-bottom, 3px solid darken($red, 20%));
+	}
+}
+
+// menu
+.main-menu{
+	
+	.menu{
+		background: $grey;
+		@include rem(border-bottom, 3px solid darken($grey, 10%));
+		
+		li{
+			
+			a{
+				display: block;
+				color: $white;
+				text-decoration: none;
+				@include rem(padding, 0.5rem 1rem);
+				@include rem(border-bottom, 1px solid darken($grey, 5%));
+			}
+			
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+// footer
+.page-footer{
+	@include rem(border-top, 1px solid darken($light-grey, 10%));
+	@include rem(padding, 1rem 0);
+	p{
+		margin: 0;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+
+	.page-header{
+	
+		.main-logo{
+			width: auto;
+		}
+	}
+	
+	.main-menu{
+	
+		.menu{
+			
+			li{
+				display: inline-block;
+				border-bottom: 0;
+				
+				a{
+					padding: 1rem 2rem;
+					border-bottom: none;
+					display: block;
+					@include rem(border-right, 1px solid darken($grey, 5%));
+					
+					&:hover{
+						background: $orange;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+@media only screen and (min-width: 1030px) {
+	
+}
+
+@media only screen and (min-width: 1240px) {
+	
+}

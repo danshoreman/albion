@@ -1,0 +1,76 @@
+/******************************************************************
+Stylesheet: Base Stylesheet
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+*********************/
+
+@import "partials/normalize";
+@import "partials/rem";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typography";
+
+@import "partials/forms";
+
+/*********************
+IMPORTING F10 stylesheet
+*********************/
+
+// REMOVE THIS FILE BEFORE GOING TO PRODUCTION
+// @import "remove/theme-stylesheet";
+
+
+/*********************
+IMPORTING MEDIA QUERIES
+*********************/
+
+// styles in base.scss
+@import "breakpoints/base";
+
+
+@media only screen and (min-width: 641px) {
+	// styles in small.scss
+	@import "breakpoints/small";
+}
+
+
+@media only screen and (min-width: 768px) {
+	// styles in medium.scss
+	@import "breakpoints/medium";
+}
+
+
+@media only screen and (min-width: 1024px) {
+	// styles in large.scss
+	@import "breakpoints/large";
+}
+
+
+@media only screen and (min-width: 1240px) {
+	// styles in xlarge.scss
+	@import "breakpoints/xlarge";
+}
+
+
+@media only screen and (min-width: 1500px) {
+	// styles in xxlarge.scss
+	@import "breakpoints/xxlarge";
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	// styles in 2x.scss
+	@import "breakpoints/2x";
+
+}
+
+@media print {
+	// styles in print.scss
+	@import "partials/print";
+
+}

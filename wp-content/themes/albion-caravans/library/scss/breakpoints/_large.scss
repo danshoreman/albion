@@ -1,0 +1,175 @@
+/******************************************************************
+Stylesheet: Desktop Stylsheet
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+	@include transition(all 0.2s ease-in-out);
+
+	&:hover, &:focus {
+		color: $link-hover;
+		text-decoration: underline;
+	}
+
+	&:active {
+
+	}
+}
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.home-carousel{
+	
+	.bxslider{
+		
+		li{
+		
+			.carouselCopy{
+				padding-top: 4rem;
+				max-width: 400px;
+				
+				h1{
+					font-size: 3rem;
+				}
+				
+				h2{
+					font-size: 2.2rem;
+				}
+			}
+			
+			.fullImage{
+				height: 500px;
+			}
+		}
+	}
+}
+
+.home-intro{
+	
+	.home-content{
+		padding: 0;
+	}
+	
+	.home-callout{
+		padding: 3rem;
+	}
+}
+
+.home-buy{
+	
+	h2{
+		font-size: 1.8rem;
+	}
+	
+	p{
+		font-size: 1.2rem;
+	}
+	
+	.we-buy,
+	.coming-soon{
+		padding: 3rem;
+	}
+}
+
+.lower-panels{
+	background: #eff4f6;
+	padding: 3rem 0;
+	
+	.accessories,
+	.help{
+		background-position: 350px center;
+		padding: 2rem;
+		
+		h3,p{
+			width: 60%;
+		}
+	}
+	.accessories{
+		margin-bottom: 1rem;
+	}
+}
+
+
+
+/*********************
+HEADER STYLES
+*********************/
+
+.sub-head{
+
+	#searchform{
+		float: right;
+		
+		div{
+			padding-top: 0;
+			width: 270px;
+			
+			#s{
+				font-size: 0.8rem;
+				width: 200px;
+				padding: 0.8rem;
+			}
+			
+			#searchsubmit{
+				padding: 0.8rem;
+				width: 70px;
+				font-size: 0.8rem;
+			}
+		}
+	}
+}
+
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.main-nav{
+	padding: 1.3rem 0;
+	.main-menu{
+
+		#menu-main-menu{
+			
+			li{
+				font-size: 0.9rem;
+				a{
+					
+				}
+				
+				&:after{
+					padding: 0 0.3rem;
+				}
+				
+				&:last-child:after{
+				}
+			}
+		}
+	}
+}
+
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+
+
+/*********************
+FOOTER STYLES
+*********************/
