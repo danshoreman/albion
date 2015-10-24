@@ -12,17 +12,17 @@
 			<p>For up to date caravan and caravan accessories news in Leeds and Bradford enter your name and email address below to go on our mailing list</p>
 			
 			<form action="http://albioncaravans.createsend.com/t/j/s/nydhld/" method="post" id="subForm">
-			    <p>
+			    <div class="field-wrap">
 			        <label for="fieldName">Name</label>
-			        <input id="fieldName" name="cm-name" type="text" />
-			    </p>
-			    <p>
+			        <input id="fieldName" name="cm-name" type="text" required />
+			    </div>
+			    <div class="field-wrap">
 			        <label for="fieldEmail">Email Address</label>
 			        <input id="fieldEmail" name="cm-nydhld-nydhld" type="email" required />
-			    </p>
-			    <p>
+			    </div>
+			    <div class="submit-wrap">
 			        <button type="submit" id="submitBtn">Subscribe</button>
-			    </p>
+			    </div>
 			</form>
 
 		</div>

@@ -363,6 +363,8 @@ p{
 
 
 
+
+
 /*********************
 LINK STYLES
 *********************/
@@ -506,7 +508,7 @@ HEADER STYLES
 				padding-left: 25px;
 				
 				&:before{
-					content: '\e958';
+					content: '\e945';
 					font-family: 'icomoon';
 		      speak: none;
 		      font-style: normal;
@@ -530,7 +532,7 @@ HEADER STYLES
 				padding-left: 25px;
 				
 				&:before{
-					content: '\e945';
+					content: '\e958';
 					font-family: 'icomoon';
 		      speak: none;
 		      font-style: normal;
@@ -787,6 +789,32 @@ WOOCOMMERCE
 	}
 }
 
+// Category List
+
+.cat_list{
+	
+	.product{
+		display: block;
+		float: left;
+		list-style-type: none;
+		
+		a{
+			display: block;
+			
+			img{
+				display: none
+			}	
+			
+			h3{
+				
+				.count{
+					background: transparent;
+				}
+			}
+		}
+	}
+}
+
 .shop-wrap{
 	padding: 1rem 0;
 	
@@ -906,4 +934,73 @@ FOOTER STYLES
 	}
 }
 
+#map-canvas{
+	width: 100%;
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+#subForm{
+	border: 1px solid #17181e;
+	padding: 15px 10px 10px 10px;
+	margin-top: 2rem;
+	@include border-radius();
+	
+	.field-wrap{
+		width: 50%;
+		float: left;
+		text-align: left;
+		padding: 0 10px 20px 10px;
+		
+		label{
+			color: $white;
+		}
+		
+		input{
+			width: 100%;
+		}
+		
+		#fieldName{
+			
+		}
+		
+		#fieldEmail{
+		
+		}
+	}
+	&:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+	
+	.submit-wrap{
+		width: 100%;
+		padding: 0 10px 10px 10px;
+		
+		#submitBtn{
+			color: $white;
+			border: none;
+			width: 100%;
+			padding: 0.8rem;
+	    @include border-radius();
+	    font-family: Arial, sans-serif;
+	    font-weight: normal;
+	    line-height: normal;
+	    font-size: 10px;
+	    font-size: 1rem;
+			background: #40859b;
+			
+			&:hover{
+				background: darken(#40859b, 10%);
+			}
+		}
+	}
+}
+
+	
+	
+	
+	
+	
 	

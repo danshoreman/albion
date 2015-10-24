@@ -33,6 +33,14 @@ a, a:visited {
 LAYOUT & GRID STYLES
 *********************/
 
+#map-canvas{
+	margin-bottom: 0;
+}
+
+#subForm{
+	padding: 20px;
+}
+
 .home-carousel{
 	
 	.bxslider{
@@ -298,7 +306,7 @@ HEADER STYLES
 				padding-left: 25px;
 				
 				&:before{
-					content: '\e958';
+					content: '\e945';
 					font-family: 'icomoon';
 		      speak: none;
 		      font-style: normal;
@@ -322,7 +330,7 @@ HEADER STYLES
 				padding-left: 25px;
 				
 				&:before{
-					content: '\e945';
+					content: '\e958';
 					font-family: 'icomoon';
 		      speak: none;
 		      font-style: normal;

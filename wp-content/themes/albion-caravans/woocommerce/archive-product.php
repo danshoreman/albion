@@ -18,6 +18,14 @@ get_header( 'shop' ); ?>
 <div class="row">
 	<div class="small-12 columns">
 	
+		<ul class="cat_list">
+		<?php 
+			
+			echo do_shortcode('[product_categories number="12" parent="0"]');
+			
+		?>
+		</ul>
+	
 	<div class="shop-wrap">
 
 	<?php
@@ -30,6 +38,7 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 		<div class="archive-intro">
+		
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
 			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>

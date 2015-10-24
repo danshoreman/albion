@@ -89,13 +89,16 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 add_action( 'woocommerce_after_main_content', 'woocommerce_output_related_products', 5 );
 
 
-// enqueue google fonts
-function google_fonts() {
-  //wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
-  //wp_enqueue_style( 'googleFonts');
+// Modify the default WooCommerce orderby dropdown
+//
+// Options: menu_order, popularity, rating, date, price, price-desc
+// In this example I'm removing price & price-desc but you can remove any of the options
+function my_woocommerce_catalog_orderby( $orderby ) {
+	unset($orderby["popularity"]);
+	unset($orderby["rating"]);
+	return $orderby;
 }
-
-add_action('wp_print_styles', 'google_fonts');
+add_filter( "woocommerce_catalog_orderby", "my_woocommerce_catalog_orderby", 20 );
 
 
 
